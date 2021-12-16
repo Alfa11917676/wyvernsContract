@@ -1628,7 +1628,7 @@ contract COSMICWYVERNSOFFSPRINGS is ERC721Enumerable, Ownable {
 
     //todo place the finalised price
     uint public  COSMICWYVERNSOFFSPRINGS_MAINSALE_PRICE = 0 ether; //priceInMainSale
-    mapping (address => uint) public saleListPurchase;
+  
   
     //todo : we need to change this baseURI
     string private _tokenBaseURI = "https://gateway.pinata.cloud/ipfs/QmNNmN2JGayxRk3hwEWw5gMCUyfmikgosrAQuCWnc9tDdN/";
