@@ -1624,18 +1624,12 @@ contract COSMICWYVERNSOFFSPRINGS is ERC721Enumerable, Ownable {
     using ECDSA for bytes32;
 
     uint public  COSMICWYVERNSOFFSPRINGS_MAX_COUNT =  3500; //maxSupply
-    uint public totalTokensSoldInPresale;
-    uint public freeSaleCounter;
-    uint public preSaleAmountMinted;
-
+  
 
     //todo place the finalised price
     uint public  COSMICWYVERNSOFFSPRINGS_MAINSALE_PRICE = 0 ether; //priceInMainSale
     mapping (address => uint) public saleListPurchase;
-    mapping (address => uint) public presalerListPurchases;
-    mapping (address => uint) public freesaleListPurchases;
-    mapping (address => uint) public freeSalePurchaseLimitPerWallet;
-
+  
     //todo : we need to change this baseURI
     string private _tokenBaseURI = "https://gateway.pinata.cloud/ipfs/QmNNmN2JGayxRk3hwEWw5gMCUyfmikgosrAQuCWnc9tDdN/";
     string private constant Sig_WORD = "private";
@@ -1691,9 +1685,6 @@ contract COSMICWYVERNSOFFSPRINGS is ERC721Enumerable, Ownable {
         payable(owner()).transfer(address(this).balance);
     }
 
-    function presalePurchasedCount(address addr) external view returns (uint) {
-        return presalerListPurchases[addr];
-    }
 
     function lockMetadata(bool _assertion) external onlyOwner {
         locked = _assertion;
